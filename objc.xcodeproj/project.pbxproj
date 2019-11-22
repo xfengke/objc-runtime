@@ -92,6 +92,9 @@
 		393CEAC60DC69E67000B69DE /* objc-references.h in Headers */ = {isa = PBXBuildFile; fileRef = 393CEAC50DC69E67000B69DE /* objc-references.h */; };
 		39ABD72312F0B61800D1054C /* objc-weak.h in Headers */ = {isa = PBXBuildFile; fileRef = 39ABD71F12F0B61800D1054C /* objc-weak.h */; };
 		39ABD72412F0B61800D1054C /* objc-weak.mm in Sources */ = {isa = PBXBuildFile; fileRef = 39ABD72012F0B61800D1054C /* objc-weak.mm */; };
+		4161F00C2387DCFF0090C3B8 /* Person+test.m in Sources */ = {isa = PBXBuildFile; fileRef = 4161F00B2387DCFF0090C3B8 /* Person+test.m */; };
+		41A1A4E0237E59A400822C37 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41A1A4DF237E59A400822C37 /* Foundation.framework */; };
+		41A1A4E3237E73D800822C37 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A1A4E2237E73D800822C37 /* Person.m */; };
 		7593EC58202248E50046AB96 /* objc-object.h in Headers */ = {isa = PBXBuildFile; fileRef = 7593EC57202248DF0046AB96 /* objc-object.h */; };
 		75A9504F202BAA0600D7D56F /* objc-locks-new.h in Headers */ = {isa = PBXBuildFile; fileRef = 75A9504E202BAA0300D7D56F /* objc-locks-new.h */; };
 		75A95051202BAA9A00D7D56F /* objc-locks.h in Headers */ = {isa = PBXBuildFile; fileRef = 75A95050202BAA9A00D7D56F /* objc-locks.h */; };
@@ -277,6 +280,11 @@
 		393CEAC50DC69E67000B69DE /* objc-references.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "objc-references.h"; path = "runtime/objc-references.h"; sourceTree = "<group>"; };
 		39ABD71F12F0B61800D1054C /* objc-weak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "objc-weak.h"; path = "runtime/objc-weak.h"; sourceTree = "<group>"; };
 		39ABD72012F0B61800D1054C /* objc-weak.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = "objc-weak.mm"; path = "runtime/objc-weak.mm"; sourceTree = "<group>"; };
+		4161F00A2387DCFF0090C3B8 /* Person+test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Person+test.h"; sourceTree = "<group>"; };
+		4161F00B2387DCFF0090C3B8 /* Person+test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Person+test.m"; sourceTree = "<group>"; };
+		41A1A4DF237E59A400822C37 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		41A1A4E1237E73D800822C37 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		41A1A4E2237E73D800822C37 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		7593EC57202248DF0046AB96 /* objc-object.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "objc-object.h"; path = "runtime/objc-object.h"; sourceTree = "<group>"; };
 		75A9504E202BAA0300D7D56F /* objc-locks-new.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "objc-locks-new.h"; path = "runtime/objc-locks-new.h"; sourceTree = "<group>"; };
 		75A95050202BAA9A00D7D56F /* objc-locks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "objc-locks.h"; path = "runtime/objc-locks.h"; sourceTree = "<group>"; };
@@ -374,6 +382,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41A1A4E0237E59A400822C37 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -654,6 +663,10 @@
 			isa = PBXGroup;
 			children = (
 				30466D8621B665A500DA7B9D /* main.m */,
+				41A1A4E1237E73D800822C37 /* Person.h */,
+				41A1A4E2237E73D800822C37 /* Person.m */,
+				4161F00A2387DCFF0090C3B8 /* Person+test.h */,
+				4161F00B2387DCFF0090C3B8 /* Person+test.m */,
 			);
 			path = "debug-objc";
 			sourceTree = "<group>";
@@ -751,6 +764,7 @@
 		F9BCC72A205C6A1600DD9AFC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				41A1A4DF237E59A400822C37 /* Foundation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -944,11 +958,18 @@
 				TargetAttributes = {
 					30466D8321B665A500DA7B9D = {
 						CreatedOnToolsVersion = 10.1;
-						DevelopmentTeam = LY6BSMT7G9;
+						DevelopmentTeam = RP6V7385UL;
 						ProvisioningStyle = Automatic;
 					};
 					837F67A81A771F63004D34FA = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = RP6V7385UL;
+					};
+					D2AAC0620554660B00DB518D = {
+						DevelopmentTeam = RP6V7385UL;
+					};
+					F9BCC6CA205C68E800DD9AFC = {
+						DevelopmentTeam = RP6V7385UL;
 					};
 				};
 			};
@@ -1011,6 +1032,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4161F00C2387DCFF0090C3B8 /* Person+test.m in Sources */,
+				41A1A4E3237E73D800822C37 /* Person.m in Sources */,
 				30466D8721B665A500DA7B9D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1115,6 +1138,7 @@
 				);
 				INSTALL_PATH = /usr/lib;
 				IS_ZIPPERED = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				ORDER_FILE = "$(SRCROOT)/libobjc.order";
 				"ORDER_FILE[sdk=iphonesimulator*]" = "";
 				OTHER_CFLAGS = (
@@ -1190,6 +1214,7 @@
 				);
 				INSTALL_PATH = /usr/lib;
 				IS_ZIPPERED = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				ORDER_FILE = "$(SRCROOT)/libobjc.order";
 				"ORDER_FILE[sdk=iphonesimulator*]" = "";
 				OTHER_CFLAGS = (
@@ -1257,6 +1282,7 @@
 				CLANG_LINK_OBJC_RUNTIME = NO;
 				CLANG_OBJC_RUNTIME = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = RP6V7385UL;
 				EXCLUDED_INSTALLSRC_SUBDIRECTORY_PATTERNS = "$(inherited) test";
 				GCC_ENABLE_CPP_EXCEPTIONS = NO;
 				GCC_ENABLE_CPP_RTTI = NO;
@@ -1300,6 +1326,7 @@
 				CLANG_LINK_OBJC_RUNTIME = NO;
 				CLANG_OBJC_RUNTIME = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = RP6V7385UL;
 				EXCLUDED_INSTALLSRC_SUBDIRECTORY_PATTERNS = "$(inherited) test";
 				GCC_ENABLE_CPP_EXCEPTIONS = NO;
 				GCC_ENABLE_CPP_RTTI = NO;
@@ -1373,7 +1400,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				DEVELOPMENT_TEAM = LY6BSMT7G9;
+				DEVELOPMENT_TEAM = RP6V7385UL;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -1428,7 +1455,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				DEVELOPMENT_TEAM = LY6BSMT7G9;
+				DEVELOPMENT_TEAM = RP6V7385UL;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -1447,6 +1474,7 @@
 		837F67AA1A771F63004D34FA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1454,6 +1482,7 @@
 		837F67AB1A771F63004D34FA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

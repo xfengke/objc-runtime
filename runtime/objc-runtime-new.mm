@@ -2700,7 +2700,8 @@ void _read_images(header_info **hList, uint32_t hCount, int totalClasses, int un
 
     ts.log("IMAGE TIMES: realize future classes");
 
-    // Discover categories. 
+    // Discover categories.
+    // 寻找category
     for (EACH_HEADER) {
         category_t **catlist = 
             _getObjc2CategoryList(hi, &count);
@@ -6127,7 +6128,6 @@ static void objc_initializeClassPair_internal(Class superclass, const char *name
     meta_ro_w  = (class_ro_t *)calloc(sizeof(class_ro_t), 1);
     cls->data()->ro = cls_ro_w;
     meta->data()->ro = meta_ro_w;
-
     // Set basic info
 
     cls->data()->flags = RW_CONSTRUCTING | RW_COPIED_RO | RW_REALIZED | RW_REALIZING;
